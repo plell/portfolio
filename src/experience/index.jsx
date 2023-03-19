@@ -25,7 +25,7 @@ export default function Experience()
                 position:[0,5,-10]
             }}>
             <Routes>
-                <Route element={<Games />} path='/games' />
+                <Route element={<Games />} index path='/games' />
                 <Route element={<Music />} path='/music' />
                 <Route element={<Writing />} path='/writing' />
                 <Route element={<Resume />} path='/resume' />
