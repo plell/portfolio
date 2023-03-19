@@ -1,9 +1,9 @@
-import Cleaners from "./cleaners";
+import Jumper from "./jumper";
 
 export default function Games() {
   return (
     <>
-      <Cleaners />
+      <Jumper />
     </>
   );
 }

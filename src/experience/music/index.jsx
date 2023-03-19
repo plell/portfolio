@@ -4,8 +4,6 @@ import { Html } from '@react-three/drei'
 import { albums } from './constants'
 
 export default function Music() {
-
-
     const albumHtml = useMemo(() => {
         return albums.map((a,i) => {
             return <Html

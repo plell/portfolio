@@ -14,9 +14,6 @@ export default function Room() {
         <Obstacles />
 
         <mesh
-        onClick={(e) => {
-            console.log('e',e)
-        }}
         ref={floor}
         position-y={-1}
         rotation-x={- Math.PI * 0.5}

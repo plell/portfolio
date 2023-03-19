@@ -1,10 +1,12 @@
-import { extend, useFrame, useThree } from "@react-three/fiber"
-import { useEffect, useRef } from "react"
+import { useFrame, useThree } from "@react-three/fiber"
+import { useEffect } from "react"
 import Player from "./Player"
 import Room from "./Room"
 import DefaultEnvironment from "../../DefaultEnvironment"
 
-export default function Cleaners()
+// jump and glide through a changing terrain
+
+export default function Jumper()
 {
     const three = useThree()
 
