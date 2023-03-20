@@ -3,15 +3,16 @@ import { useEffect } from "react"
 import Player from "./Player"
 import Room from "./Room"
 import DefaultEnvironment from "../../DefaultEnvironment"
+import { Physics } from '@react-three/rapier'
 
-// jump and glide through a changing terrain
+// jump and glide through a changing terrain, kick over paint buckets (like collecting coins)
 
 export default function Jumper()
 {
     const three = useThree()
 
     useEffect(() => {
-        three.camera.position.set(0, 5, -10)
+        // three.camera.position.set(0, 5, -10)
     }, [])
     
 
@@ -30,10 +31,14 @@ export default function Jumper()
     
     return (
         <>
-            <DefaultEnvironment />
+            <Physics>
+                <DefaultEnvironment
+                    parallax
+                    controls />
 
-            <Player />
-            <Room />
+                <Player />
+                <Room />
+            </Physics>
 
             </>
     )

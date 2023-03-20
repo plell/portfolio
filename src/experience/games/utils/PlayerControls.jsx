@@ -14,7 +14,7 @@ const sizes = {
     height: window.innerHeight
 }
 
-export default function PlayerControls({ mouseControls, player }) {
+export default function PlayerControls({ mouseControls, rigidBody, player }) {
     
     useFrame((_, deltaTime) => {
         move()
@@ -76,7 +76,7 @@ export default function PlayerControls({ mouseControls, player }) {
 
     function mouseMove(e) {
         if (mouseControls) {
-            player.current.position.x = (((e.clientX / sizes.width) - 0.5) * -1) * 12
+            player.current.position.x = (((e.clientX / sizes.width) - 0.5)) * 12
         }
     }
 
@@ -98,6 +98,7 @@ export default function PlayerControls({ mouseControls, player }) {
 
     function jump() {
         console.log('jump!')
+        rigidBody.current.applyImpulse({ x: 0, y: 5, z: 0 })
     }
     
     function move() {
@@ -122,10 +123,11 @@ export default function PlayerControls({ mouseControls, player }) {
 
 
     function turnRight() {
-        playerAngle = Math.PI * -0.5
+        playerAngle = Math.PI * 0.5
+        
     }
     function turnLeft() {
-        playerAngle = Math.PI * 0.5
+        playerAngle = Math.PI * -0.5
     }
 
     function turnUp() {

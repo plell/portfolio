@@ -11,8 +11,6 @@ import {
     Route
 } from "react-router-dom";
 
-
-
 export default function Experience()
 {
     return (
@@ -22,7 +20,7 @@ export default function Experience()
                 fov: 64,
                 near: 0.1,
                 far: 200,
-                position:[0,5,-10]
+                position:[0,5,10]
             }}>
             <Routes>
                 <Route element={<Games />} index path='/games' />
